@@ -5,13 +5,14 @@ using System.Globalization;
 
 namespace DayNNight
 {
-	internal static class ConsoleAnalyzer
+	public static class ConsoleAnalyzer
 	{
 		public static class SystemDefault
 		{
 			public static Color ForegroundColor { get; } = GetDefaultColor(10, Color.White);
 
 			public static Color BackgroundColor { get; } = GetDefaultColor(11, Color.Black);
+			public static bool IsDarkMode => BackgroundColor.GetBrightness() < 0.5f;
 		}
 
 		private static Color GetDefaultColor(int ansiTypeCode, Color fallback)

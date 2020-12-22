@@ -10,7 +10,7 @@ namespace DayNNight.Models
 		private AnsiConsoleTheme Light { get; }
 
 		public AnsiConsoleTheme Auto =>
-			ConsoleAnalyzer.SystemDefault.BackgroundColor.GetBrightness() > 0.5f ? Light : Dark;
+			ConsoleAnalyzer.SystemDefault.IsDarkMode ? Light : Dark;
 
 		public DayNNightTheme(Dictionary<ConsoleThemeStyle, StyleSet> dark,
 			Dictionary<ConsoleThemeStyle, StyleSet> light)

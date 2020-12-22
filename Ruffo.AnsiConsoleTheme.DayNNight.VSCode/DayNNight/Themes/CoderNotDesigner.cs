@@ -53,14 +53,8 @@ namespace DayNNight.Themes
 				[ConsoleThemeStyle.Boolean] = new() { Foreground = Color.FromArgb(40, 116, 192) },
 				[ConsoleThemeStyle.Scalar] = new() { Foreground = Color.FromArgb(86, 242, 79) },
 				[ConsoleThemeStyle.LevelVerbose] = new(),
-				[ConsoleThemeStyle.LevelDebug] = new()
-				{
-					Foreground = Color.FromArgb(236, 48, 255), Background = defaultLightThemeText.ChangeBrightness(0.2f)
-				},
-				[ConsoleThemeStyle.LevelInformation] = new()
-				{
-					Foreground = Color.FromArgb(81, 185, 72), Background = defaultLightThemeText.ChangeBrightness(0.2f)
-				},
+				[ConsoleThemeStyle.LevelDebug] = new() { Foreground = Color.FromArgb(236, 48, 255), Background = defaultLightThemeText.ChangeBrightness(0.2f) },
+				[ConsoleThemeStyle.LevelInformation] = new() { Foreground = Color.FromArgb(81, 185, 72), Background = defaultLightThemeText.ChangeBrightness(0.2f) },
 				[ConsoleThemeStyle.LevelWarning] = new() { Foreground = Color.FromArgb(242, 158, 34) },
 				[ConsoleThemeStyle.LevelError] = new() { Foreground = Color.FromArgb(242, 25, 23) },
 				[ConsoleThemeStyle.LevelFatal] = new()
