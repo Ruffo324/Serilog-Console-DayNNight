@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayNNight", "DayNNight\DayNNight.csproj", "{5ACFB9A0-57A0-4F61-A5AC-AFAEDD3E4832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayNNight.Playground", "DayNNight.Playground\DayNNight.Playground.csproj", "{7CE6845C-81BE-426A-A745-56ED55EA623A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5ACFB9A0-57A0-4F61-A5AC-AFAEDD3E4832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ACFB9A0-57A0-4F61-A5AC-AFAEDD3E4832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ACFB9A0-57A0-4F61-A5AC-AFAEDD3E4832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ACFB9A0-57A0-4F61-A5AC-AFAEDD3E4832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CE6845C-81BE-426A-A745-56ED55EA623A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE6845C-81BE-426A-A745-56ED55EA623A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE6845C-81BE-426A-A745-56ED55EA623A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE6845C-81BE-426A-A745-56ED55EA623A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
