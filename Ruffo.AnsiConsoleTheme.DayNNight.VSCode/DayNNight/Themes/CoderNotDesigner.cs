@@ -9,7 +9,7 @@ namespace DayNNight.Themes
 	// TODO [C.Groothoff]: Summary.
 	internal class CoderNotDesigner
 	{
-		private static readonly Color defaultDarkThemeText = Color.FromArgb(0xF1, 0xF2, 0xF1);
+		private static readonly Color defaultDarkThemeText = Color.FromArgb(243, 244, 243);
 		private static readonly Color defaultLightThemeText = Color.FromArgb(39, 39, 39);
 
 		internal static readonly DayNNightTheme Theme = new(
@@ -17,8 +17,8 @@ namespace DayNNight.Themes
 			new Dictionary<ConsoleThemeStyle, StyleSet>
 			{
 				[ConsoleThemeStyle.Text] = new() { Foreground = defaultDarkThemeText },
-				[ConsoleThemeStyle.SecondaryText] = new() { Foreground = defaultDarkThemeText.ChangeBrightness(-0.2f) },
-				[ConsoleThemeStyle.TertiaryText] = new() { Foreground = defaultDarkThemeText.ChangeBrightness(-0.4f) },
+				[ConsoleThemeStyle.SecondaryText] = new() { Foreground = defaultDarkThemeText.ChangeBrightness(-0.1f) },
+				[ConsoleThemeStyle.TertiaryText] = new() { Foreground = defaultDarkThemeText.ChangeBrightness(-0.2f) },
 				[ConsoleThemeStyle.Invalid] = new() { Foreground = Color.FromArgb(242, 102, 240) },
 				[ConsoleThemeStyle.Null] = new() { Foreground = Color.FromArgb(121, 163, 177) },
 				[ConsoleThemeStyle.Name] = new() { Foreground = Color.FromArgb(69, 98, 104) },

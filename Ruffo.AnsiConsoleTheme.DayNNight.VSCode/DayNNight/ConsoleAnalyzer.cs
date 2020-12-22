@@ -46,6 +46,7 @@ namespace DayNNight
 			}
 			catch (Exception)
 			{
+				// TODO [C.Groothoff]: Handle correct...
 				result = string.Empty;
 				return false;
 			}

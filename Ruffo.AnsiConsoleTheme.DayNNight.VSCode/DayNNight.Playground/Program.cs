@@ -16,7 +16,13 @@ namespace DayNNight.Playground
 
 			Log.Information("Hello, world!");
 			Log.Warning("Is \"DarkMode\" enabled? My code say's: {Is}", ConsoleAnalyzer.SystemDefault.IsDarkMode);
-			Console.ResetColor();
+
+			Log.Debug("System BackgroundBrightness: {GetBrightness}",
+				ConsoleAnalyzer.SystemDefault.BackgroundColor.GetBrightness());
+
+			Log.Debug("System BackgroundColor: {BackgroundColor}", ConsoleAnalyzer.SystemDefault.BackgroundColor);
+			Log.Debug("System ForegroundColor: {ForegroundColor}", ConsoleAnalyzer.SystemDefault.ForegroundColor);
+
 			Log.Verbose("Console.Background is: {0}", Console.BackgroundColor);
 			Log.Verbose("Console.Foreground is: {0}", Console.ForegroundColor);
 
@@ -41,6 +47,7 @@ namespace DayNNight.Playground
 			}
 
 			Log.CloseAndFlush();
+			Console.ResetColor();
 		}
 
 		private static void Fail()
