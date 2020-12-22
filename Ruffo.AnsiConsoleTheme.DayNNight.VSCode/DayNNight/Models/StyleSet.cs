@@ -3,6 +3,7 @@ using DayNNight.Extensions;
 
 namespace DayNNight.Models
 {
+	// TODO [C.Groothoff]: Summary.
 	public class StyleSet
 	{
 		public Color? Foreground { get; init; }

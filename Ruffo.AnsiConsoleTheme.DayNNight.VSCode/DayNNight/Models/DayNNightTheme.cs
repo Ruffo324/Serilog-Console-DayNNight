@@ -4,13 +4,13 @@ using Serilog.Sinks.SystemConsole.Themes;
 
 namespace DayNNight.Models
 {
+	// TODO [C.Groothoff]: Summary.
 	public class DayNNightTheme
 	{
 		private AnsiConsoleTheme Dark { get; }
 		private AnsiConsoleTheme Light { get; }
 
-		public AnsiConsoleTheme Auto =>
-			ConsoleAnalyzer.SystemDefault.IsDarkMode ? Light : Dark;
+		public AnsiConsoleTheme Auto => ConsoleAnalyzer.SystemDefault.IsDarkMode ? Dark : Light;
 
 		public DayNNightTheme(Dictionary<ConsoleThemeStyle, StyleSet> dark,
 			Dictionary<ConsoleThemeStyle, StyleSet> light)

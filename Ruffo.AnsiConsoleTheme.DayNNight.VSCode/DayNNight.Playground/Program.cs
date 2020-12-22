@@ -2,8 +2,9 @@
 using System.Threading;
 using Serilog;
 
-namespace DayNNight
+namespace DayNNight.Playground
 {
+	// TODO [C.Groothoff]: Summary.
 	internal class Program
 	{
 		private static void Main(string[] args)

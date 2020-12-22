@@ -5,6 +5,7 @@ using System.Globalization;
 
 namespace DayNNight
 {
+	// TODO [C.Groothoff]: Summary.
 	public static class ConsoleAnalyzer
 	{
 		public static class SystemDefault
