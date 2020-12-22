@@ -18,7 +18,7 @@ namespace DayNNight
 
 		private static Color GetDefaultColor(int ansiTypeCode, Color fallback)
 		{
-			if (!TryEvaluateProcess("printf", $"\033]{ansiTypeCode};?\007", out var xtermResult) ||
+			if (!TryEvaluateProcess("echo", $"\033]{ansiTypeCode};?\007", out var xtermResult) ||
 				!xtermResult.Contains("rgb"))
 				return fallback; // Default fallback background.
 
@@ -29,23 +29,32 @@ namespace DayNNight
 			return Color.FromArgb(red, green, blue);
 		}
 
+
 		private static bool TryEvaluateProcess(string command, string arguments, out string result)
 		{
 			try
 			{
-				var processInfo = new ProcessStartInfo(command, arguments)
-					{ UseShellExecute = false, RedirectStandardOutput = true };
+				var processStartInfo = new ProcessStartInfo
+				{
+					FileName = command,
+					Arguments = arguments,
+					RedirectStandardOutput = true,
+					RedirectStandardError = true,
+					UseShellExecute = false
+				};
 
-				using var process = Process.Start(processInfo);
-				if (process == null)
-					throw new InvalidOperationException("Could start process 'git!'");
+				var process = Process.Start(processStartInfo);
+				result = process!.StandardOutput.ReadToEnd();
+				process.WaitForExit();
 
-				result = process.StandardOutput.ReadToEnd();
-				//.Replace("\n", string.Empty).Replace("\r", string.Empty);
+				Debug.WriteLine($"{command} -> {result}"); // TODO [C.Groothoff]: Debug
 				return true;
 			}
-			catch (Exception)
+			catch (Exception e)
 			{
+				Console.WriteLine(e);
+				Debugger.Break();
+
 				// TODO [C.Groothoff]: Handle correct...
 				result = string.Empty;
 				return false;
